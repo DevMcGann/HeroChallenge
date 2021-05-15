@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "970706202815",
+    "project_id": "intermediait-a0e77",
+    "storage_bucket": "intermediait-a0e77.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:970706202815:android:35ef2cebc321fed8bc160a",
+        "android_client_info": {
+          "package_name": "com.intermedia.challenge"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "970706202815-jmchm9sthokg6vv403ake4hnlut1is4q.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC7Biqga9ZHTX_Mw4mbnumtBf29NYt5wjA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "970706202815-jmchm9sthokg6vv403ake4hnlut1is4q.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

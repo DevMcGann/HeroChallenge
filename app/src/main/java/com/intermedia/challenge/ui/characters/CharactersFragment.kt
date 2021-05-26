@@ -58,7 +58,7 @@ class CharactersFragment : Fragment() {
                 comics = Appearances(character.comics.available, character.comics.collectionURI, character.comics.appearances, character.comics.returned),
                 thumbnail = Thumbnail(character.thumbnail.path, character.thumbnail.extension)
             )
-            viewModel.setSelectedCharacter(Character(comics = selectedChar.comics, name = character.name, description = character.description, thumbnail = selectedChar.thumbnail))
+            viewModel.setSelectedCharacter(Character(comics = selectedChar.comics, name = character.name.toUpperCase(), description = character.description, thumbnail = selectedChar.thumbnail))
             findNavController().navigate(R.id.action_navigation_characters_to_characterDetailFragment)
         }
 

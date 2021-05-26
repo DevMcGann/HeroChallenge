@@ -4,7 +4,6 @@
     xmlns:tools="http://schemas.android.com/tools">
 
     <data>
-
         <variable
             name="character"
             type="com.intermedia.challenge.data.models.Character" />
@@ -16,6 +15,7 @@
         android:layout_height="wrap_content"
         android:layout_marginVertical="4dp"
         android:layout_marginHorizontal="8dp"
+        android:paddingHorizontal="8dp"
         app:cardCornerRadius="4dp">
 
         <androidx.constraintlayout.widget.ConstraintLayout
@@ -45,11 +45,11 @@
                 app:layout_constraintBottom_toBottomOf="parent">
 
                 <TextView
-                    android:id="@+id/text_name"
+                    android:id="@+id/event_name"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:textSize="24sp"
-                    android:text="@{character.name}"
+                    android:text="@{character.name.toUpperCase()}"
                     tools:text="Thanos" />
 
                 <Space
@@ -57,7 +57,7 @@
                     android:layout_height="9dp" />
 
                 <TextView
-                    android:id="@+id/text_description"
+                    android:id="@+id/event_date"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:ellipsize="end"

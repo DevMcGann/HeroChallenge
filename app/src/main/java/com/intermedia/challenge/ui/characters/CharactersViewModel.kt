@@ -57,7 +57,6 @@ class CharactersViewModel(private val charactersRepository: CharactersRepository
     }
 
     fun loadMoreCharacters() {
-        Log.d("ViewModel", "LoadMoreCharacters!")
         loadCharacters(newOffset)
     }
 }

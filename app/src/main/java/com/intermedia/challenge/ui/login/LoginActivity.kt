@@ -40,6 +40,8 @@ class LoginActivity : AppCompatActivity() {
         val view = binding.root
         setContentView(view)
 
+        supportActionBar?.hide()
+
         callbackManager = CallbackManager.Factory.create()
         buttonFacebookLogin = binding.loginButton
         buttonFacebookLogin.setReadPermissions("email", "public_profile")
@@ -161,6 +163,9 @@ class LoginActivity : AppCompatActivity() {
             addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK)
         })
     }
+
+
+
 
 
 

@@ -30,12 +30,103 @@ data class Appearance(
     val type: String = ""
 )
 
-data class Thumbnail(
-    val extension: String = "",
-    val path: String = ""
-)
+
 
 data class Url(
     val type: String = "",
     val url: String = ""
 )
+
+
+/*
+{
+    "code": "int",
+    "status": "string",
+    "copyright": "string",
+    "attributionText": "string",
+    "attributionHTML": "string",
+
+    "data": {
+    "offset": "int",
+    "limit": "int",
+    "total": "int",
+    "count": "int",
+
+    "results": [
+    {
+        "id": "int",
+        "name": "string",
+        "description": "string",
+        "modified": "Date",
+        "resourceURI": "string",
+
+        "urls": [
+        {
+            "type": "string",
+            "url": "string"
+        }
+        ],
+
+        "thumbnail": {
+        "path": "string",
+        "extension": "string"
+    },
+
+        "comics": {
+        "available": "int",
+        "returned": "int",
+        "collectionURI": "string",
+
+        "items": [
+        {
+            "resourceURI": "string",
+            "name": "string"
+        }
+        ]
+
+        },
+
+
+        "stories": {
+        "available": "int",
+        "returned": "int",
+        "collectionURI": "string",
+
+        "items": [
+        {
+            "resourceURI": "string",
+            "name": "string",
+            "type": "string"
+        }
+        ]
+
+        },
+
+        "events": {
+        "available": "int",
+        "returned": "int",
+        "collectionURI": "string",
+        "items": [
+        {
+            "resourceURI": "string",
+            "name": "string"
+        }
+        ]
+        },
+
+        "series": {
+        "available": "int",
+        "returned": "int",
+        "collectionURI": "string",
+        "items": [
+        {
+            "resourceURI": "string",
+            "name": "string"
+        }
+        ]
+         }
+    }
+    ]
+},
+    "etag": "string"
+}*/

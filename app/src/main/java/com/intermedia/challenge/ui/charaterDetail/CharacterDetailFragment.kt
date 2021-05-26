@@ -1,24 +1,16 @@
 package com.intermedia.challenge.ui.charaterDetail
 
-import android.graphics.drawable.Drawable
+import android.app.ActionBar
 import android.os.Bundle
-import android.util.Log
-import androidx.fragment.app.Fragment
-import android.view.LayoutInflater
 import android.view.View
-import android.view.ViewGroup
-import android.widget.Toast
-import androidx.lifecycle.MutableLiveData
+import androidx.appcompat.app.AppCompatActivity
+import androidx.fragment.app.Fragment
 import androidx.lifecycle.Observer
 import androidx.navigation.fragment.findNavController
 import com.bumptech.glide.Glide
 import com.intermedia.challenge.R
 import com.intermedia.challenge.data.models.Appearance
-import com.intermedia.challenge.data.models.Appearances
-import com.intermedia.challenge.data.models.Character
 import com.intermedia.challenge.databinding.FragmentCharacterDetailBinding
-import com.intermedia.challenge.databinding.FragmentCharactersBinding
-import com.intermedia.challenge.ui.characters.CharactersAdapter
 import com.intermedia.challenge.ui.characters.CharactersViewModel
 import org.koin.android.viewmodel.ext.android.sharedViewModel
 
@@ -30,11 +22,24 @@ class CharacterDetailFragment : Fragment(R.layout.fragment_character_detail) {
     private var appearences_string : MutableList<String> = mutableListOf()
     private val rv_adapter = CharactersDetailAdapter()
 
+
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         binding = FragmentCharacterDetailBinding.bind(view)
         getDataFromViewModel()
         goBackToCharacters()
+    }
+
+    override fun onResume() {
+        super.onResume()
+        val supportActionBar: androidx.appcompat.app.ActionBar? = (requireActivity() as AppCompatActivity).supportActionBar
+        supportActionBar?.hide()
+    }
+
+    override fun onStop() {
+        super.onStop()
+        val supportActionBar: androidx.appcompat.app.ActionBar? = (requireActivity() as AppCompatActivity).supportActionBar
+        supportActionBar?.show()
     }
 
     private fun goBackToCharacters() {
@@ -54,9 +59,9 @@ class CharacterDetailFragment : Fragment(R.layout.fragment_character_detail) {
 
             binding.rvCharacterComicsAppearences.adapter = rv_adapter
             binding.tCharacterName.text = it.name
-            if (it.description.isNullOrEmpty()){
+            if (it.description.isNullOrEmpty()) {
                 binding.tCharacterInfo.text = "There is no description available."
-            }else{
+            } else {
                 binding.tCharacterInfo.text = it.description
             }
 

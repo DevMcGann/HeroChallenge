@@ -17,7 +17,7 @@
 
     <fragment
         android:id="@+id/navigation_events"
-        android:name="com.intermedia.challenge.ui.events.EventsFragment"
+        android:name="com.intermedia.challenge.ui.comics.ComicsFragment"
         android:label="@string/title_events"
         tools:layout="@layout/fragment_events" />
     <fragment

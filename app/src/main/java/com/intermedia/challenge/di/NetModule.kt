@@ -2,6 +2,7 @@ package com.intermedia.challenge.di
 
 import com.intermedia.challenge.BuildConfig
 import com.intermedia.challenge.data.services.CharacterService
+import com.intermedia.challenge.data.services.ComicService
 import okhttp3.OkHttpClient
 import org.koin.dsl.module
 import retrofit2.Retrofit
@@ -13,7 +14,9 @@ val networkModule = module {
     single { provideRetrofit(get()) }
 
     single { provideCharacterService(get()) }
+    single { provideComicService(get()) }
 }
+
 
 fun provideRetrofit(okHttpClient: OkHttpClient): Retrofit {
     return Retrofit.Builder()
@@ -27,3 +30,6 @@ fun provideHttpClient(): OkHttpClient = OkHttpClient.Builder().build()
 
 fun provideCharacterService(retrofit: Retrofit): CharacterService =
     retrofit.create(CharacterService::class.java)
+
+fun provideComicService(retrofit: Retrofit): ComicService =
+    retrofit.create(ComicService::class.java)

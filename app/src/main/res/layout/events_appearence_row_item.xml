@@ -1,7 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".ui.main.MainScreenActivity">
+
+    <data>
+        <variable
+            name="event"
+            type="com.intermedia.challenge.data.models.Event" />
+    </data>
+
+<androidx.constraintlayout.widget.ConstraintLayout
     android:layout_width="match_parent"
     android:layout_height="wrap_content">
 
@@ -12,7 +22,7 @@
         android:layout_marginStart="16dp"
         android:layout_marginTop="30dp"
         android:layout_marginBottom="37dp"
-        android:text="Iron Man (1968) #55"
+        android:text="Event Name"
         android:fontFamily="@font/roboto"
         android:textStyle="bold"
         android:textSize="16sp"
@@ -51,3 +61,4 @@
         app:layout_constraintTop_toBottomOf="@+id/t_comic_appeareance"
         app:layout_constraintVertical_bias="0.111" />
 </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

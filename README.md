@@ -1,3 +1,9 @@
+# Algunas consideraciones mientras lo hacia
+
+En la pantalla de Detalles del personaje, en la aparición en los Comics de estos,  no encontré fechas que mostrar.   Por eso deje una hardcoded. 
+Lo mismo en el apartado de eventos,  al entrar a los eventos relacionados,  no pude encontrar ni un solo item que no devuelva un array vacio... Por eso también mockee Events() como para que tenga sentido el expandable Card.  
+
+
 # Intermedia Code Challenge - Android
 
 # Descripción del Challenge
